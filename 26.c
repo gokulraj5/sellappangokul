@@ -4,20 +4,20 @@ int main()
     char    str[1000];
     int cD,ca,cSC,cs;
     int counter;
-    countDigits=countAlphabet=countSpecialChar=countSpaces=0;
+    cD=ca=cSC=cs=0;
     printf("Enter a string: ");
     gets(str);
     for(counter=0;str[counter]!=NULL;counter++)
     {
         if(str[counter]>='0' && str[counter]<='9')
-            countDigits++;
+            cD++;
         else if((str[counter]>='A' && str[counter]<='Z')||(str[counter]>='a' && str[counter]<='z'))
-            countAlphabet++;
+            ca++;
         else if(str[counter]==' ')
-            countSpaces++;
+            cs++;
         else
-            countSpecialChar++;
+            cSC++;
     }
-    printf("\nDigits: %d \nAlphabets: %d \nSpaces: %d \nSpecial Characters: %d",countDigits,countAlphabet,countSpaces,countSpecialChar);
+    printf("\nDigits: %d \nAlphabets: %d \nSpaces: %d \nSpecial Characters: %d",cD,ca,cs,cSC);
     return 0;
 }
